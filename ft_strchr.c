@@ -1,7 +1,18 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strchr.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: jhoekstr <jhoekstr@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/01/28 18:24:26 by jhoekstr      #+#    #+#                 */
+/*   Updated: 2022/02/24 15:17:41 by jhoekstr      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
-#include <string.h>
 #include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
 	int	i;
@@ -15,18 +26,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (s[i] == (char)c)
 		return ((char *)s + i);
-	return (0);
+	return (NULL);
 }	
-
-// int	main(void)
-// {
-// 	char 	b;
-// 	char	c;
-// 	char	s[] = "Pineapple";
-
-// 	c = *ft_strchr(s, 'B');
-// 	printf("%c\n", c);
-// 	b = *strchr(s, 'B');
-// 	printf("%c", b);
-// 	return (0);
-// }

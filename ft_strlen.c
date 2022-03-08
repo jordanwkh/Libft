@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strlen.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: jhoekstr <jhoekstr@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/01/28 18:23:47 by jhoekstr      #+#    #+#                 */
+/*   Updated: 2022/02/24 15:17:55 by jhoekstr      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
-#include <stdio.h>
 #include "libft.h"
+
 int	ft_strlen(const char *str)
 {
 	int	i;
@@ -12,10 +24,3 @@ int	ft_strlen(const char *str)
 	}
 	return (i);
 }
-
-// int main(void)
-// {
-
-// 	printf("%d", ft_strlen("Hoeveel is dit?"));
-// 	return(0);
-// }

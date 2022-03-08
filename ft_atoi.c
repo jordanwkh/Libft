@@ -6,7 +6,7 @@
 /*   By: jhoekstr <jhoekstr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/12/14 17:45:38 by jhoekstr      #+#    #+#                 */
-/*   Updated: 2021/12/14 17:45:39 by jhoekstr      ########   odam.nl         */
+/*   Updated: 2022/02/01 17:18:25 by jhoekstr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	ft_isspace(int c)
 {
 	if (c == ('\t') || c == ('\n') || c == ('\v')
-		|| c == ('\f') || c == ('\r') || c == (32) || c == (' '))
+		|| c == ('\f') || c == ('\r') || c == (' '))
 		return (1);
 	return (0);
 }

@@ -1,8 +1,18 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strjoin.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: jhoekstr <jhoekstr@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/01/28 18:21:39 by jhoekstr      #+#    #+#                 */
+/*   Updated: 2022/02/24 15:12:44 by jhoekstr      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
-#include <string.h>
-#include <stdlib.h>
 #include "libft.h"
+
 char	*ft_strjoin(char const	*s1, char const *s2)
 {
 	int		i;

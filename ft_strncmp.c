@@ -1,7 +1,18 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strncmp.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: jhoekstr <jhoekstr@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/01/28 18:23:29 by jhoekstr      #+#    #+#                 */
+/*   Updated: 2022/02/24 15:11:15 by jhoekstr      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
-#include <string.h>
 #include "libft.h"
+
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

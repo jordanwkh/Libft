@@ -1,7 +1,18 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_memcmp.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: jhoekstr <jhoekstr@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/01/25 18:03:47 by jhoekstr      #+#    #+#                 */
+/*   Updated: 2022/02/24 15:17:00 by jhoekstr      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
-#include <string.h>
 #include "libft.h"
+
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	int	i;
@@ -17,24 +28,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-// int main (void) 
-// {
-//    char str1[15];
-//    char str2[15];
-//    int ret;
-
-//    memcpy(str1, "ABCDEG", 6);
-//    memcpy(str2, "ABCDFG", 6);
-
-//    ret = ft_memcmp(str1, str2, 5);
-
-//    if(ret > 0) {
-//       printf("str2 is less than str1");
-//    } else if(ret < 0) {
-//       printf("str1 is less than str2");
-//    } else {
-//       printf("str1 is equal to str2");
-//    }
-//    return(0);
-// }
