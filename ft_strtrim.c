@@ -1,5 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strtrim.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: jhoekstr <jhoekstr@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/01/28 18:22:50 by jhoekstr      #+#    #+#                 */
+/*   Updated: 2022/02/25 18:32:36 by jhoekstr      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <stdio.h>
 
 static int	ft_inset(char const *set, char c)
 {
@@ -22,12 +33,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*rtn;
 
 	i = 0;
+	if (!s1)
+		return (NULL);
 	l = ft_strlen(s1);
-	while (ft_inset(set, s1[i]))
+	while (s1[i] && ft_inset(set, s1[i]))
 	{
 		i++;
 	}
-	while (ft_inset(set, s1[l - 1]))
+	while (l > 0 && ft_inset(set, s1[l - 1]))
 	{
 		l--;
 	}
@@ -36,11 +49,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	return (rtn);
 }
-
-// int main(void)
-// {
-//     char s1[] = "     ";
-//     char set[] = " ";
-//     printf("%s", ft_strtrim(s1, set));
-//     return (0);
-// }

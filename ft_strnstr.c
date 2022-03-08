@@ -1,7 +1,18 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strnstr.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: jhoekstr <jhoekstr@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/01/28 18:23:21 by jhoekstr      #+#    #+#                 */
+/*   Updated: 2022/02/24 15:11:05 by jhoekstr      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
-#include <string.h>
 #include "libft.h"
+
 char	*ft_strnstr( const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
@@ -28,14 +39,3 @@ char	*ft_strnstr( const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
-  //int main(void)
- // {
- 	// char a[] = "Ciao Bella";
- 	// char b[] = "Bella";
- 	//printf("%s\n", ft_strnstr(a, b, 10));
- 	//printf("%s", strnstr(a, b, 10));
-
-  //}
-
-

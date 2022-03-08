@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         ::::::::             #
+#    Makefile                                           :+:    :+:             #
+#                                                      +:+                     #
+#    By: jhoekstr <jhoekstr@student.codam.nl>         +#+                      #
+#                                                    +#+                       #
+#    Created: 2022/02/25 18:32:03 by jhoekstr      #+#    #+#                  #
+#    Updated: 2022/02/25 18:32:05 by jhoekstr      ########   odam.nl          #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 
 SRCS = ft_atoi.c\
@@ -35,16 +47,17 @@ ft_putstr_fd.c\
 ft_putendl_fd.c\
 ft_putnbr_fd.c\
 
-BONUS_SRCS = ft_lstnew.c\
-ft_lstadd_front.c\
-ft_lstsize.c\
-ft_lstlast.c\
-ft_lstadd_back.c\
+BONUS_SRCS = ft_lstnew_bonus.c\
+ft_lstadd_front_bonus.c\
+ft_lstsize_bonus.c\
+ft_lstlast_bonus.c\
+ft_lstadd_back_bonus.c\
+ft_lstdelone_bonus.c\
 
 OBJ = $(SRCS:%.c=%.o)	
 BONUS_OBJ = $(BONUS_SRCS:%.c=%.o)
 
-CFLAGS ?= -Wall -Wextra -Werror 
+CFLAGS = -Wall -Wextra -Werror 
 
 CC = gcc
 

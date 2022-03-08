@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_putnbr_fd.c                                     :+:    :+:            */
+/*   ft_lstnew_bonus.c                                  :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: jhoekstr <jhoekstr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/12/15 16:03:01 by jhoekstr      #+#    #+#                 */
-/*   Updated: 2022/02/24 15:13:42 by jhoekstr      ########   odam.nl         */
+/*   Created: 2021/12/13 15:29:39 by jhoekstr      #+#    #+#                 */
+/*   Updated: 2022/02/25 18:40:06 by jhoekstr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-void	ft_putnbr_fd(int n, int fd)
+t_list	*ft_lstnew(void *content)
 {
-	long	i;
+	t_list	*new;
 
-	i = (long) n;
-	if (i < 0)
-	{
-		ft_putchar_fd('-', fd);
-		i *= -1;
-	}
-	if (i > 9)
-		ft_putnbr_fd(i / 10, fd);
-	ft_putchar_fd(i % 10 + '0', fd);
+	new = malloc(sizeof(t_list));
+	if (!new)
+		return (NULL);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }

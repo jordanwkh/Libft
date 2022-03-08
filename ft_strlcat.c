@@ -1,7 +1,18 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_strlcat.c                                       :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: jhoekstr <jhoekstr@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/01/28 18:24:00 by jhoekstr      #+#    #+#                 */
+/*   Updated: 2022/02/22 15:32:39 by jhoekstr      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
-#include <string.h>
 #include "libft.h"
+
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
@@ -15,9 +26,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		return (lens);
 	if (dstsize <= lend)
 		return (lens + dstsize);
-	while (src[i] != '\0' && (lend + i) > (dstsize - 1))
+	while (src[i] != '\0' && (lend + i) < (dstsize - 1))
 	{
-		dst[lend + i] = *(char *)src;
+		dst[lend + i] = src[i];
 		i++;
 	}
 	dst[lend + i] = '\0';

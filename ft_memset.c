@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_memset.c                                        :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: jhoekstr <jhoekstr@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/01/28 18:24:47 by jhoekstr      #+#    #+#                 */
+/*   Updated: 2022/02/24 15:17:21 by jhoekstr      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
-#include <stdio.h>
 #include "libft.h"
+
 void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*str;
@@ -14,10 +26,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}	
 	return (b);
 }
-
-// int	main(void)
-// {
-// 	char str[] = "Werkt dit";
-// 	ft_memset( str, 'J', 3);
-// 	printf("%s", str);
-// }

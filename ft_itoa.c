@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   ft_itoa.c                                          :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: jhoekstr <jhoekstr@student.codam.nl>         +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2022/01/25 18:00:27 by jhoekstr      #+#    #+#                 */
+/*   Updated: 2022/02/07 16:29:07 by jhoekstr      ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include <stdio.h>
 
@@ -26,17 +38,14 @@ char	*ft_itoa(int n)
 	long	nb;
 
 	nb = n;
+	if (nb == 0)
+		return (ft_strdup("0"));
 	len = intlen(nb);
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
 	len--;
-	if (nb == 0)
-	{
-		*str = '0';
-		return (str);
-	}
 	if (nb < 0)
 	{
 		str[0] = '-';

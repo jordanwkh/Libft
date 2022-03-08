@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_putnbr_fd.c                                     :+:    :+:            */
+/*   ft_lstsize_bonus.c                                 :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: jhoekstr <jhoekstr@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/12/15 16:03:01 by jhoekstr      #+#    #+#                 */
-/*   Updated: 2022/02/24 15:13:42 by jhoekstr      ########   odam.nl         */
+/*   Created: 2021/12/13 16:53:13 by jhoekstr      #+#    #+#                 */
+/*   Updated: 2022/02/25 18:40:10 by jhoekstr      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_lstsize(t_list *lst)
 {
-	long	i;
+	int	i;
 
-	i = (long) n;
-	if (i < 0)
+	i = 0;
+	if (!lst)
+		return (0);
+	while (lst)
 	{
-		ft_putchar_fd('-', fd);
-		i *= -1;
+		i++;
+		lst = lst->next;
 	}
-	if (i > 9)
-		ft_putnbr_fd(i / 10, fd);
-	ft_putchar_fd(i % 10 + '0', fd);
+	return (i);
 }
